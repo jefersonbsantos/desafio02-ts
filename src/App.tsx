@@ -6,6 +6,10 @@ import {
   Button
 } from '@chakra-ui/react'
 import { login } from './services/login';
+import { Header } from './components/Header/Header';
+import { Card } from './components/Card';
+import { Button as NewButton } from './components/Button';
+import { welcome } from './services/welcome';
 
 function App() {
   return (
@@ -22,6 +26,11 @@ function App() {
               Button
             </Button>
           </Center>
+          <Header />
+          <Card />
+          <NewButton onClick={() => welcome('Usuário')} mt={4} mx='auto' display='block'>
+            Clique para receber boas-vindas
+          </NewButton>
         </Box>
       </Box>
     </ChakraProvider>
